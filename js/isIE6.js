@@ -8,7 +8,7 @@ function isIE6(dely_time,right_url,wrong_url){
         window.location.href=right_url;//不为IE6，跳转至正确的页面
     }else{
         //是IE6，先提示后跳转
-        document.write("<div style='width: 960px;height:60px;line-height: 60px;border: solid 1px lightblue;margin:300px auto;text-align: center;box-shadow: 5px 5px 5px #CCCCCC;'>请使用IE6以上的版本, <span id='time' style='color:red;font-weight: bolder'>"+dely_time+"</span> 秒后进行跳转</div>");
+        document.write("<div style='font-size:22px;width: 98%;height:80px;line-height: 80px;border: solid 1px lightblue;top:35%;position: absolute;margin:0 auto;text-align: center;box-shadow: 5px 5px 5px #CCCCCC;'>请使用IE6以上的版本, <span id='time' style='color:red;font-weight: bolder'>"+dely_time+"</span> 秒后进行跳转</div>");
         delayURL(wrong_url);
     }
 }
