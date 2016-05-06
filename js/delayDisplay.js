@@ -16,10 +16,10 @@ function delayDisplay(displayNum,className,time){//传入三个参数     显示
 	toScreenNum=isScreenNum+displayNum;
 	//注册scroll时间
 	window.onscroll=function(){
-		var scrollTop=document.body.scrollTop;
-		var clientHeight=document.body.clientHeight ;
+		var scrollTop=document.documentElement.scrollTop;
+		var clientHeight=document.documentElement.clientHeight;
 		var scrollHeight=document.body.scrollHeight;
-		if(scrollTop+clientHeight==scrollHeight){//判断滚动条是否到达底部
+		if(scrollTop+clientHeight>=scrollHeight){//判断滚动条是否到达底部
 			sleep(time);
 			//显示项目
 			for(var i=isScreenNum;i<toScreenNum;i++){
