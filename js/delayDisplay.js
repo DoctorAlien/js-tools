@@ -1,4 +1,4 @@
-function delayDisplay(displayNum,className){//传入两个参数     显示的数目/格式化的类名
+function delayDisplay(displayNum,className,time){//传入三个参数     显示的数目/格式化的类名/sleep时间
 	var isScreenNum;//已经显示的项数
 	var toScreenNum;//将显示的数量
 	//绑定类名
@@ -20,7 +20,7 @@ function delayDisplay(displayNum,className){//传入两个参数     显示的�
 		var clientHeight=document.body.clientHeight ;
 		var scrollHeight=document.body.scrollHeight;
 		if(scrollTop+clientHeight==scrollHeight){//判断滚动条是否到达底部
-			sleep(1500);
+			sleep(time);
 			//显示项目
 			for(var i=isScreenNum;i<toScreenNum;i++){
 				divClass[i].style.display="";
